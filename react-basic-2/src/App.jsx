@@ -3,11 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
 import ButtonClick from './Button.jsx'
+import Counter from './Counter.jsx'
 
 function App() {
  
   return (
-     <ButtonClick/>
+     <Counter/>
   )
 }
 
