@@ -4,11 +4,15 @@ import viteLogo from '/vite.svg'
 
 import ButtonClick from './Button.jsx'
 import Counter from './Counter.jsx'
+import LikeButton from './LikeButton.jsx'
 
 function App() {
  
   return (
-     <Counter/>
+    <>
+     {/* <Counter/> */}
+     <LikeButton/>
+    </>
   )
 }
 

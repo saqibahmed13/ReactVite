@@ -10,10 +10,16 @@ export default function Counter(){
     return setCount;
   }
 
+  function resetValue(){
+    setCount (0);
+  }
+
 return (
   <div>
     <p>Count: {count}</p>
     <button onClick={incrementCount}>Increments</button>
+    <button onClick={resetValue}>Reset</button>
+
   </div>
 );
 
