@@ -22,8 +22,11 @@ export default function LudoButton(){
 
     // const updateBlue = ()=>{
     //     setMoves((prevMoves)=>{
-    //         return{...prevMoves, blue:moves.blue+1}
+    //         return{...prevMoves, blue:prevMoves.blue+1}
     //     })
+    //    setArr((preArr)=>{
+    //     return [...arr,"newArray"]
+    // })
     // }
 
     return(
