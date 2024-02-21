@@ -3,6 +3,8 @@ import { useState } from "react"
 export default function TodoList(){
     const [todos, setTodos] = useState(["newSample"]);
 
+    
+
     return(
         <div>
             <input type="text" placeholder="add a task" />
@@ -10,7 +12,7 @@ export default function TodoList(){
             <br />
             <br />
             <br />
-            
+
             <p>Task to do</p>
             <ul>
                 {
