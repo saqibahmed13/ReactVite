@@ -5,13 +5,15 @@ import viteLogo from '/vite.svg'
 import ButtonClick from './Button.jsx'
 import Counter from './Counter.jsx'
 import LikeButton from './LikeButton.jsx'
+import LudoButton from './LudoButton.jsx'
 
 function App() {
  
   return (
     <>
      {/* <Counter/> */}
-     <LikeButton/>
+     {/* <LikeButton/> */}
+     <LudoButton/>
     </>
   )
 }
