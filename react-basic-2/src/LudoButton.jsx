@@ -2,9 +2,11 @@ import { useState } from "react"
 
 export default function LudoButton(){
     const[moves,setMoves] = useState({blue:0,yellow:0,green:0,red:0})
+    const[arr,setArr] = useState(["oldArray"]);
 
     const updateBlue =()=>{
         setMoves({...moves, blue: moves.blue + 1});
+        setArr([...arr,"newArray"])
     } 
     const updateYellow =()=>{
         setMoves({...moves, yellow: moves.yellow + 1});
@@ -28,6 +30,7 @@ export default function LudoButton(){
         <div>
             <p>Game Begin!</p>
             <div className="Board">
+                <p>Array={arr}</p>
                 <p > Blue moves = {moves.blue}</p>
                 <button style={{background:"blue"}} onClick={updateBlue}>+1</button>
 
