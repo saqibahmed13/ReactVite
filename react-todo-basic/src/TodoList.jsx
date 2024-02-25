@@ -34,7 +34,7 @@ export default function TodoList() {
     });
   };
 
-  let deleteTodoOne = (id) => {
+  let upperCaseOne = (id) => {
     setTodos((todos) =>
       todos.map((todo) => {
         if (todo.id === id) {
@@ -68,7 +68,7 @@ export default function TodoList() {
             <li key={todo.id}>
               {todo.task}
               <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-              <button onClick={() => deleteTodoOne(todo.id)}>
+              <button onClick={() => upperCaseOne(todo.id)}>
             upperCase One
               </button>
             </li>
