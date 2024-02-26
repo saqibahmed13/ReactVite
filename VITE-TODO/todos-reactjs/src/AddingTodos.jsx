@@ -44,23 +44,26 @@ export default function AddingTodos() {
     );
   };
 
-let markAllDone = ()=>{
-  setTodos((todos)=>{
-    return todos.map((todo)=>{
-      return {
-        ...todo, isDone:true,
-      }
-    })
-  })
-}
+  let markAllDone = () => {
+    setTodos((todos) => {
+      return todos.map((todo) => {
+        return {
+          ...todo,
+          isDone: true,
+        };
+      });
+    });
+  };
   return (
-    <div>
+    <div className="form">
       <input
         type="text"
         placeholder="Add Task"
         value={newTask}
         onChange={updateTodo} // on change change hoti hi newTask ki value change hotiye
       />
+      <br />
+      <br />
       <button onClick={addingTask}>Add Task</button>
       <br />
       <br />
