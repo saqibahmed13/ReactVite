@@ -1,29 +1,55 @@
-.form {
+/* app.css */
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #c44343;
+  border-radius: 5px;
+  background-color: #832727;
   display: flex;
   flex-direction: column;
-  align-items : center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* This will make the container take the full height of the viewport */
 }
 
-.form input {
+.input-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: calc(100% - 80px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #22997f;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
   margin-bottom: 10px;
 }
 
-.form button {
-  margin: 10px 0;
-}
-
-.tasks {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.taskItem {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-.taskItem span {
-  margin-right: 10px;
+.done {
+  text-decoration: line-through;
 }

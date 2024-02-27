@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import "./App.css";
 
 export default function AddingTodos() {
   const [todos, setTodos] = useState([
@@ -12,7 +13,7 @@ export default function AddingTodos() {
       return [
         ...prevArray,
         { newAddedTask: newTask, id: uuidv4(), isDone: false },
-      ]; // new cloned array along with value and id
+      ]; // new cloned array along with value and id 
     });
     console.log("yeh task", newTask);
     setNewTask("");
@@ -55,7 +56,7 @@ export default function AddingTodos() {
     });
   };
   return (
-    <div className="form">
+    <div className="container">
       <input
         type="text"
         placeholder="Add Task"
@@ -68,23 +69,30 @@ export default function AddingTodos() {
       <br />
       <br />
       <button>Added Tasks</button>
-      {todos.map((todo) => {
-        // for rendering we are using
-        return (
-          <li key={todo.id}>
-            <span
-              style={todo.isDone ? { textDecorationLine: "line-through" } : {}}
-            >
-              {todo.newAddedTask}
-            </span>
-            <button onClick={() => deleteTask(todo.id)}>Delete</button>
-            {/* here we want to pass deleteTask along with the value but if we pass normally it will execute we can see in console
+      <ul className="task-list">
+        {todos.map((todo) => {
+          // for rendering we are using
+          return (
+            <li key={todo.id} className="task-item">
+              <span
+                className="task-text"
+                style={
+                  todo.isDone ? { textDecorationLine: "line-through" } : {}
+                }
+              >
+                {todo.newAddedTask}
+              </span>
+              <div className="task-buttons">
+                <button onClick={() => deleteTask(todo.id)}>Delete</button>
+                {/* here we want to pass deleteTask along with the value but if we pass normally it will execute we can see in console
             thats why we are using arrow function with the help of arrow we can pass arguments hence we should write arrow functions */}
-            <button onClick={() => markAsDone(todo.id)}>Done</button>
-          </li>
-        );
-      })}
-      <br />
+                <button onClick={() => markAsDone(todo.id)}>Done</button>
+              </div>
+            </li>
+          );
+        })}
+        <br />
+      </ul>
       <button onClick={markAllDone}>Mark All Done</button>
     </div>
   );
