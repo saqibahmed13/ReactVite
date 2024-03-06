@@ -1,6 +1,6 @@
 /* app.css */
 
-.container {
+ /* .container {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -11,10 +11,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* This will make the container take the full height of the viewport */
-}
+   height: 100vh;                   
+} */
 
-.input-container {
+/* .input-container {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -52,4 +52,4 @@ li {
 
 .done {
   text-decoration: line-through;
-}
+}  */

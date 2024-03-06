@@ -2,17 +2,17 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 
-export default function AddingTodos() {
+export default function AddingTodos({}) {
   const [todos, setTodos] = useState([
-    { newAddedTask: "sample ", id: uuidv4() }, // this is added task
+    { newAddedTask: "sample ", id: uuidv4() },   // this is added task
   ]);
-  const [newTask, setNewTask] = useState(""); // this is for adding a task
+  const [newTask, setNewTask] = useState("");    // this is for adding a task
 
   let addingTask = () => {
     setTodos((prevArray) => {
       return [
         ...prevArray,
-        { newAddedTask: newTask, id: uuidv4(), isDone: false },
+        { newAddedTask: newTask, id: uuidv4(), isDone: false},
       ]; // new cloned array along with value and id 
     });
     console.log("yeh task", newTask);
