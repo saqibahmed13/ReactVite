@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid"; // this is for keys
 
 export default function TodoList() {
   // const [todos, setTodos] = useState(["newSample"]);
+
   const [todos, setTodos] = useState([{ task: "newsample", id: uuidv4() }]); // yeh added wala task ka
   const [newTodoTask, setNewTodoTask] = useState(""); // yeh search box ka
 
@@ -11,7 +12,6 @@ export default function TodoList() {
       return [...prevTodos, { task: newTodoTask, id: uuidv4() }];
     });
     setNewTodoTask(" ");
-
     // search should be empty after adding the task
   };
 
@@ -69,7 +69,7 @@ export default function TodoList() {
               {todo.task}
               <button onClick={() => deleteTodo(todo.id)}>Delete</button>
               <button onClick={() => upperCaseOne(todo.id)}>
-            upperCase One
+                upperCase One
               </button>
             </li>
           );
