@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import AddTodo from './AddTodo'
+import TodosList from './TodosList'
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <AddTodo/>
+      <TodosList/>
       </>
   )
 }
