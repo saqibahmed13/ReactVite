@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import TodosList from './TodosList'
 import './App.css'
 

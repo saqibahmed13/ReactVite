@@ -9,7 +9,7 @@ export default function UpdateTodo({ todos, deleteTask }) {
             return (
               <li key={todo.id} className="task-item">
                 {todo.newAddedTask}
-            <DeleteTodo  id={todo.id} deleteTask = {deleteTask}/>
+            <DeleteTodo  id={todo.id}  deleteTask = {deleteTask}/>
               </li>
             );
           })}
