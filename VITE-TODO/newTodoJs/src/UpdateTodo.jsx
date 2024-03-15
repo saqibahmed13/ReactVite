@@ -12,7 +12,7 @@ export default function UpdateTodo({ todos, deleteTask }) {
             <DeleteTodo  id={todo.id}  deleteTask = {deleteTask}/>
               </li>
             );
-          })}
+          })} 
           <br />
         </ul>
       </div>
