@@ -13,10 +13,14 @@ export default function TodosList() {
     });
   };
 
+  const deleteTask = (key) => {
+    setTodos(todos.filter((todo) => todo.key !== key));
+  };
+
   return (
     <div>
       <AddingTodos addingTask={submitTodo} />
-      <UpdateTheTodo todos={todos} />
+      <UpdateTheTodo todos={todos} deleteTask = {deleteTask} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import DeleteTheTodo from "./DeleteTheTodo";
 
-export default function UpdateTheTodo({todos}){
+export default function UpdateTheTodo({todos, deleteTask}){
     return(
         <div>
             <ul>

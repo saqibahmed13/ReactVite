@@ -2,6 +2,7 @@
 import DeleteTodo from "./DeleteTodo";
 
 export default function UpdateTodo({ todos, deleteTask }) {
+
     return (
       <div>
         <ul className="task-list">
