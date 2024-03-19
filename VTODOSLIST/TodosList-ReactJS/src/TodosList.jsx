@@ -2,6 +2,7 @@ import AddingTodos from "./AddingTodos";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import UpdateTheTodo from "./UpdateTheTodo";
+import './Todos.css'
 
 export default function TodosList() {
   const [todos, setTodos] = useState([{ list: " ", key: uuidv4() }]); // for adding task
@@ -18,7 +19,7 @@ export default function TodosList() {
   };
 
   return (
-    <div>
+    <div className="container">
       <AddingTodos addingTask={submitTodo} />
       <UpdateTheTodo todos={todos} deleteTask={deleteTask} />
     </div>
