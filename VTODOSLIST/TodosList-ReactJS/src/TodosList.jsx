@@ -20,7 +20,7 @@ export default function TodosList() {
   return (
     <div>
       <AddingTodos addingTask={submitTodo} />
-      <UpdateTheTodo todos={todos} deleteTask = {deleteTask} />
+      <UpdateTheTodo todos={todos} deleteTask={deleteTask} />
     </div>
   );
 }
